@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Demo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+  <!-- LOGIN CONTAINER -->
+  <div id="loginContainer" class="bg-white shadow-lg rounded-lg p-8 w-full max-w-sm">
+
+    <h2 class="text-2xl font-bold mb-6 text-center text-gray-800">Iniciar sesión</h2>
+
+    <form id="login-form" class="flex flex-col gap-4">
+
+      <input id="email" type="email" placeholder="Email" autocomplete="email"
+        class="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+
+      <div class="relative">
+        <input id="password" type="password" placeholder="Password" autocomplete="current-password"
+          class="border border-gray-300 rounded-lg px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-400" />
+        <span id="togglePassword" class="absolute inset-y-0 right-3 flex items-center cursor-pointer text-gray-500">
+          👁️
+        </span>
+      </div>
+
+
+      <button type="submit" class="bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
+        Ingresar
+      </button>
+    </form>
+
+    <p id="fetch-api-true" class="mt-4 text-green-600 font-semibold hidden">
+      ✔ Ingreso exitoso
+    </p>
+
+    <p id="fetch-api-false" class="mt-4 text-red-600 font-semibold hidden">
+      ✖ Credenciales incorrectas
+    </p>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div id="dashboard" class="hidden bg-white shadow-lg rounded-lg p-8 w-full max-w-md text-center">
+    <h2 class="text-2xl font-bold mb-4 text-gray-800">Bienvenido al Dashboard</h2>
+
+    <p class="text-gray-600 mb-6">Has ingresado correctamente al sistema.</p>
+
+    <button id="logout" class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition">
+      Cerrar sesión
+    </button>
+  </div>
+
+  <script src="./login.js"></script>
+  <script src="./togglePassword.js"></script>
+</body>
+
+</html>
